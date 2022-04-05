@@ -1,0 +1,20 @@
+FROM golang:alpine
+
+#RUN apk update && apk add git
+#RUN apk add bash
+
+RUN export GO111MODULE=on
+
+RUN mkdir /app
+RUN mkdir /app/codeeducation
+
+WORKDIR /app/codeeducation
+
+RUN cd /app/codeeducation
+
+COPY *.go .
+COPY *.mod .
+
+RUN go build
+
+ENTRYPOINT ["/app/codeeducation/main"] 
