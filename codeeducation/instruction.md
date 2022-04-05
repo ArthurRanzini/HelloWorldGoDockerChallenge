@@ -15,6 +15,7 @@ docker push arthurranzini/codeeducation
 docker run /codeeducation
 
 #GIT
+#REMOTO / ADICIONAR REMOTO
 git checkout master
 git branch -m main
 git status
